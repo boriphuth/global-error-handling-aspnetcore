@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalErrorHandling", "GlobalErrorHandling\GlobalErrorHandling.csproj", "{2A1E3F93-105E-4325-8939-E35B461C74CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "globalerrorhandling", "globalerrorhandling\globalerrorhandling.csproj", "{2A1E3F93-105E-4325-8939-E35B461C74CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{B941742F-8894-43F2-B61F-114D128116AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "loggerservice", "loggerservice\loggerservice.csproj", "{B941742F-8894-43F2-B61F-114D128116AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

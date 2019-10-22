@@ -20,9 +20,22 @@ namespace GlobalErrorHandling.Controllers
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            _logger.LogInfo("Fetching all the Students from the storage");
+
+            var students = DataManager.GetAllStudents(); //simulation for the data base access
+
+            _logger.LogInfo($"Returning {students.Count} students.");
+
+            return Ok(students);
+        }
+
+        // Post api/values
+        [HttpPost]
+        public IActionResult Error()
+        {
+            throw new Exception("Exception while fetching all the students from the storage.");
         }
     }
 }
