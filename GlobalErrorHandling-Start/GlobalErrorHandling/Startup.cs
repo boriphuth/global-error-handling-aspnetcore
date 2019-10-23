@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using NLog;
+using Serilog;
 
 namespace GlobalErrorHandling
 {
@@ -21,7 +22,7 @@ namespace GlobalErrorHandling
     {
         public Startup(IConfiguration configuration)
         {
-            LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
+            // LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
             Configuration = configuration;
         }
 
@@ -47,6 +48,8 @@ namespace GlobalErrorHandling
                 app.UseHsts();
             }
         
+            app.UseSerilogRequestLogging();
+
             //app.ConfigureExceptionHandler(logger);
             app.ConfigureCustomExceptionMiddleware();
         
